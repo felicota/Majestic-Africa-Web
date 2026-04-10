@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", serif;
+  --font-display: "Space Grotesk", sans-serif;
+
+  --color-africa-gold: #D4AF37;
+  --color-africa-earth: #8B4513;
+  --color-africa-sunset: #FF4500;
+  --color-africa-savanna: #F5DEB3;
+  --color-africa-deep: #2F4F4F;
+}
+
+@layer base {
+  body {
+    @apply bg-[#0a0502] text-stone-100 selection:bg-africa-gold selection:text-africa-deep;
+  }
+}
+
+.glass-card {
+  @apply bg-white/5 backdrop-blur-md border border-white/10;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-africa-gold via-africa-sunset to-africa-gold;
+}
+
+.panoramic-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.panoramic-scroll::-webkit-scrollbar {
+  display: none;
+}
